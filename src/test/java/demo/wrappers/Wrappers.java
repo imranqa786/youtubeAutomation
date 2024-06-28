@@ -14,4 +14,22 @@ public class Wrappers {
     /*
      * Write your selenium wrappers here
      */
+
+     public static void click(WebElement elem){
+        if(elem.isDisplayed()){
+            elem.click();
+        }else{
+            System.out.println("Element is not displayed");
+        }
+     }
+
+     public static  void sendKeys(WebElement element,String keysToSend){
+        if(element.isDisplayed()){
+            element.clear();
+            element.sendKeys(keysToSend);
+        }else{
+            System.out.println("Webelemen you are searching is not displayed");
+        }
+     }
+    
 }
